@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d1117" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="PluralDexx" />
+  <title>PluralDexx v0.7</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header-top">
+      <h1><img id="app-logo" src="icons/PluralDexx_Logo.png" alt="PluralDexx logo" /> PluralDexx v0.7</h1>
+      <div id="data-toolbar">
+        <select id="mobile-tab-selector" style="display:none;background:#071516;border:1px solid #2f6768;border-radius:8px;color:#dcfdfa;padding:.35rem .5rem;font-size:.8rem;cursor:pointer">
+          <option value="nexus">nexus</option>
+          <option value="pluraldex">pluraldex</option>
+          <option value="games">games</option>
+          <option value="media">media</option>
+          <option value="writing">writing</option>
+          <option value="scrapbook">scrapbook</option>
+          <option value="aac">AAC</option>
+          <option value="friends">friends</option>
+          <option value="partners">partners</option>
+          <option value="family">family</option>
+          <option value="front">front</option>
+          <option value="settings">settings</option>
+          <option value="timeline">timeline</option>
+          <option value="bulletboard">bulletboard</option>
+          <option value="triggers">triggers</option>
+          <option value="health">health</option>
+          <option value="agreements">agreements</option>
+        </select>
+        <button id="btn-toggle-view" title="Toggle between desktop and mobile view">📱 Mobile</button>
+        <button id="btn-export">⬇ export data</button>
+        <button id="btn-import">⬆ import data</button>
+        <input type="file" id="import-file-input" accept=".json" style="display:none" />
+      </div>
+    </div>
+    <nav id="rfid-navbar">
+      <button data-tag="nexus">nexus</button>
+      <button data-tag="pluraldex">pluraldex</button>
+      <button data-tag="games">games</button>
+      <button data-tag="media">media</button>
+      <button data-tag="writing">writing</button>
+      <button data-tag="scrapbook">scrapbook</button>
+      <button data-tag="aac">AAC</button>
+      <button data-tag="friends">friends</button>
+      <button data-tag="partners">partners</button>
+      <button data-tag="family">family</button>
+      <button data-tag="front">front</button>
+      <button data-tag="settings">settings</button>
+      <button data-tag="timeline">timeline</button>
+      <button data-tag="bulletboard">bulletboard</button>
+      <button data-tag="triggers">triggers</button>
+      <button data-tag="health">health</button>
+      <button data-tag="agreements">agreements</button>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <aside class="screen screen-large" id="screen-large">
+      <div id="large-content" class="content-panel">Use the buttons above to switch homepage.</div>
+    </aside>
+
+    <section class="screen screen-medium" id="screen-medium">
+      <div id="medium-content" class="content-panel"></div>
+    </section>
+
+    <section class="screen screen-small" id="screen-small">
+      <div id="small-content" class="content-panel"></div>
+    </section>
+  </section>
+
+  <template id="pluraldex-card">
+    <article class="pluracard">
+      <img class="entry-img" src="" alt="avatar" loading="lazy" />
+      <h4 class="entry-name"></h4>
+      <p class="entry-tags"></p>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PluralDexx v0.7</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header-top">
+      <h1>PluralDexx v0.7</h1>
+      <div id="data-toolbar">
+        <button id="btn-export">⬇ export data</button>
+        <button id="btn-import">⬆ import data</button>
+        <input type="file" id="import-file-input" accept=".json" style="display:none" />
+      </div>
+    </div>
+    <nav id="rfid-navbar">
+      <button data-tag="nexus">nexus</button>
+      <button data-tag="pluraldex">pluraldex</button>
+      <button data-tag="games">games</button>
+      <button data-tag="media">media</button>
+      <button data-tag="writing">writing</button>
+      <button data-tag="scrapbook">scrapbook</button>
+      <button data-tag="aac">AAC</button>
+      <button data-tag="partners">partners</button>
+      <button data-tag="family">family</button>
+      <button data-tag="front">front</button>
+      <button data-tag="settings">settings</button>
+      <button data-tag="timeline">timeline</button>
+      <button data-tag="bulletboard">bulletboard</button>
+      <button data-tag="triggers">triggers</button>
+      <button data-tag="health">health</button>
+      <button data-tag="agreements">agreements</button>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <aside class="screen screen-large" id="screen-large">
+      <div id="large-content" class="content-panel">Use the buttons above to switch homepage.</div>
+    </aside>
+
+    <section class="screen screen-medium" id="screen-medium">
+      <div id="medium-content" class="content-panel"></div>
+    </section>
+
+    <section class="screen screen-small" id="screen-small">
+      <div id="small-content" class="content-panel"></div>
+    </section>
+  </section>
+
+  <template id="pluraldex-card">
+    <article class="pluracard">
+      <img class="entry-img" src="" alt="avatar" loading="lazy" />
+      <h4 class="entry-name"></h4>
+      <p class="entry-tags"></p>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
